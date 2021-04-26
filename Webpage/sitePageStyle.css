@@ -28,19 +28,23 @@
 
 main {
     padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-.imagesSounds, .siteInfo {
-    margin-top: 50px;
-}
+/* .imagesSounds, 
+.siteInfo {
+    margin-top: 40px;
+} */
 
 /* Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. */
 
-.featureImageInfo {
+.siteName {
+    font-size: 2.5rem;
+}
+
+.featureImageInfo,
+.subtitle {
     font-size: 1.5rem;
 }
 
