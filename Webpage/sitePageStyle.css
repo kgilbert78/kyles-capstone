@@ -32,6 +32,10 @@ main {
     margin-bottom: 40px;
 }
 
+h1 {
+    font-family: 'Fahkwang', sans-serif;
+}
+
 /* .imagesSounds, 
 .siteInfo {
     margin-top: 40px;
