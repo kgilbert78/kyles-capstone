@@ -56,7 +56,7 @@
 <!-- https://bootstrapcreative.com/bootstrap-text-sizes/    
     https://www.w3schools.com/bootstrap/bootstrap_typography.asp -->
 <!-- Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. -->
-            <div id="thumbnailRow" class="thumbnailRow row pt-3">
+            <div id="thumbnailRow" class="thumbnailRow row pt-3" onclick="changeImage(event)">
                 <div class="thumbnailImageDiv col-3">
                     <img 
                         id="thumbnailImage1"
@@ -102,6 +102,31 @@
                     <button type="button" class="btn btn-lg btn-info">Sound 3</button>
                 </div>
             </div>
+
+            <script type="text/javascript">
+         
+                let images = document.getElementById("thumbnailRow").getElementsByTagName("img");
+                for (let i=0; i < images.length; i++) {
+                    images[i].onmouseover = function () {
+                        this.style.cursor = 'hand';
+                        this.style.borderColor = "orange";
+                    }
+                    images[i].onmouseout = function () {
+                        this.style.cursor = 'pointer';
+                        this.style.borderColor = "lightgray";
+                    }
+                }
+                function changeImage(event)
+                {
+                    event = event || window.event;
+        
+                    let targetElement = event.target || event.srcElement;
+        
+                    if (targetElement.tagName == "IMG") {
+                        document.getElementById("featureImage").src = targetElement.getAttribute("src");
+                    }
+                }
+            </script>
         </section>
 
         <section class="siteInfo col-lg-5">
