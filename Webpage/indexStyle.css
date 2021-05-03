@@ -1,0 +1,98 @@
+/* NAV SETTINGS */
+
+.navbarTop {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color:rgb(219, 121, 1);
+    z-index: 1000;
+}
+
+.nav-link {
+    color: black;
+}
+
+/* REST OF SETTINGS */
+
+.a {
+    text-decoration: none;
+    color: rgb(0, 0, 156);
+}
+
+h1 {
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1000;
+}
+
+h2{
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    opacity: 1 !important; 
+}
+
+h3 {
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 1.2rem;
+    color: black;
+}
+
+h4 {
+    font-size: 1rem;
+    color: black;
+    border: black 1px solid;
+    padding: 4px;
+}
+
+main {
+    margin-top: 56px;
+}
+
+.mainContent {
+    margin: 16px;
+    z-index: 1000;
+}
+
+.indexBackground {    
+    height: 100px;
+	width: 100vw;
+	position: relative;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: url("images/downtownSyracuse.jpg");
+    opacity: 0.75;
+    background-color: black;
+}
+
+/* Fix text  so it's unaffected by the opacity of the background image. */
+/* possibly in css for h1 or indexH1 or #indexForeground */
+#indexForeground {
+    opacity: 1 !important; 
+    z-index: 1000;
+    height: 100px;
+	width: 100vw;
+}
+
+.indexH1{
+    color: black;
+    padding: 20px;
+    opacity: 1 !important; 
+}
+
+.indexH2{
+
+}
+
+.indexH3{
+    font-size: .75rem;
+    color: black;
+}
+
+.btn {
+    background-color: rgb(219, 121, 1);
+    margin: 0px 2px;
+}
