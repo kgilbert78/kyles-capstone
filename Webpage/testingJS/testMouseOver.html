@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover & mouseout events</title>
+    <script type = "text/javascript">
+        function setNewImage() {
+            document.getElementById("hotelSyracuse").src="images/hotelSyracuse1920s.jpg"
+        }
+
+        function setOldImage() {
+            document.getElementById("hotelSyracuse").src="images/hotelSyracuse.jpg"
+        }
+
+    </script>
+</head>
+<body>
+    <img 
+        id="hotelSyracuse"
+        onmouseover="setNewImage()" 
+        onmouseout="setOldImage()" 
+        src="images/hotelSyracuse.jpg" 
+        width="300"
+    />
+
+</body>
+</html>
