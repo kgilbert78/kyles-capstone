@@ -48,9 +48,18 @@ h2 {
     font-size: 2.5rem;
 }
 
+.featureImage {
+    max-height: 100%;
+}
+
 .featureImageInfo,
 .subtitle {
     font-size: 1.5rem;
+}
+
+.imageContainer {
+    height: 320px; /* 500px browser size */
+    text-align: center;
 }
 
 .audioControls {

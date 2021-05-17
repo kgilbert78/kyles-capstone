@@ -19,7 +19,9 @@
     text-decoration: none;
     color: rgb(0, 0, 156);
 }
-
+/* Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. 
+While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size.
+Which to use? https://zellwk.com/blog/rem-vs-em/   */
 h1 {
     font-family: 'Fahkwang', sans-serif;
     font-size: 2.5rem;
@@ -83,9 +85,9 @@ main {
     opacity: 1 !important; 
 }
 
-.indexH2{
+/* .indexH2{
 
-}
+} */
 
 .indexH3{
     font-size: .75rem;
