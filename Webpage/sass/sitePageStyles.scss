@@ -1,3 +1,15 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+// Relative file paths:
+// Starting with "/" returns to the root directory and starts there
+// Starting with "../" moves one directory backwards and starts there
+// Starting with "../../" moves two directories backwards and starts there (and so on...)
+// To move forward, just start with the first subdirectory and keep moving forward
+
+// sass --watch sass/sitePageStyles.scss styles/sitePageStyles.css
+
 /* NAV SETTINGS */
 
 .navbarTop {
@@ -56,10 +68,6 @@ h2 {
 .subtitle {
     font-size: 1.5rem;
 }
-
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 .imageContainer {
     height: 320px; /* 500px browser size */

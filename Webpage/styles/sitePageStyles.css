@@ -1,0 +1,80 @@
+/* NAV SETTINGS */
+.navbarTop {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbarBottom {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbarTop,
+.navbarBottom {
+  background-color: #db7901;
+}
+
+.nav-link {
+  color: black;
+}
+
+/* REST OF SETTINGS */
+main {
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1,
+h2 {
+  font-family: "Fahkwang", sans-serif;
+}
+
+/* .imagesSounds, 
+.siteInfo {
+    margin-top: 40px;
+} */
+/* Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. */
+.siteName {
+  font-size: 2.5rem;
+}
+
+.featureImage {
+  max-height: 100%;
+}
+
+.featureImageInfo,
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.imageContainer {
+  height: 320px;
+  /* 500px browser size */
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .imageContainer {
+    height: 500px;
+    text-align: center;
+  }
+}
+.audioControls {
+  font-size: x-large;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #db7901;
+  margin: 0px 2px;
+}
+
+/*# sourceMappingURL=sitePageStyles.css.map */
