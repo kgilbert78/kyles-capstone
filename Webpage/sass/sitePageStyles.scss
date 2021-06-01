@@ -49,10 +49,9 @@ h2 {
     font-family: 'Fahkwang', sans-serif;
 }
 
-/* .imagesSounds, 
-.siteInfo {
-    margin-top: 40px;
-} */
+.imagesSounds {
+    margin-bottom: 20px;
+}
 
 /* Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. */
 
@@ -80,6 +79,15 @@ h2 {
     }
 }
 
+.thumbnailImageDiv {
+	height: 100px;
+	text-align: center;
+}
+
+.thumbnailImage {
+    max-height: 100%;
+}
+
 .audioControls {
     font-size: x-large;
 }
@@ -91,5 +99,18 @@ h2 {
 .btn {
     background-color: rgb(219, 121, 1);
     margin: 0px 2px;
+    border: none;
 }
 
+.btn:hover {
+	background-color: #5bc0de;
+}
+
+
+// .soundEffects {
+//     display: flex;
+//     justify-content: space-between;
+//     @include media-breakpoint-up(sm) {
+//         flex-flow: row wrap;
+//     }
+// }
