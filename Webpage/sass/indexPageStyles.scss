@@ -1,3 +1,15 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+// Relative file paths:
+// Starting with "/" returns to the root directory and starts there
+// Starting with "../" moves one directory backwards and starts there
+// Starting with "../../" moves two directories backwards and starts there (and so on...)
+// To move forward, just start with the first subdirectory and keep moving forward
+
+// sass --watch sass/indexPageStyles.scss styles/indexPageStyles.css
+
 /* NAV SETTINGS */
 
 .navbarTop {
@@ -34,6 +46,11 @@ h1 {
     text-align: center;
     z-index: 1000;
 }
+@include media-breakpoint-up(sm) {
+   h1 {
+    font-size: 4rem;
+   }
+}
 
 h2{
     font-family: 'Fahkwang', sans-serif;
@@ -61,19 +78,64 @@ main {
 }
 
 .mainContent {
-    margin: 16px;
+    margin: 6px 16px 16px 16px;
     z-index: 1000;
 }
 
+@include media-breakpoint-up(sm) {
+    .mainContent {
+        margin: 16px;
+    }    
+}
+
+.largerDisplayOnly {
+    display: none;
+}
+@include media-breakpoint-up(sm) {
+    .largerDisplayOnly {
+        display: block;
+    }
+}
+
+.imageContainer{
+    height: 500px; /* 500px browser size */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.widthOfIndexPage {
+    max-height: 100%;
+    min-width: 800px;
+}
+
+.doubleImageContainer {
+    height: 250px;
+    margin-bottom: 300px;
+}
+
+.sideBySide {
+    max-height: 100%;
+}
+
 .indexBackground {    
-    height: 100px;
+    // height: 100px;
+    height: 5.5rem;
 	width: 100vw;
 	position: relative;
 	background-size: cover;
 	background-position: 50% 50%;
-	background-image: url("images/downtownSyracuse.jpg");
+	background-image: url("../images/downtownSyracuse.jpg");
     opacity: 0.75;
     background-color: black;
+}
+@include media-breakpoint-up(sm) {
+    .indexBackground {
+        height: 7rem;
+    }
+}
+
+.indexForeground h1 {
+    opacity: 1;
 }
 
 /* Fix text  so it's unaffected by the opacity of the background image. */
@@ -91,16 +153,32 @@ main {
     opacity: 1 !important; 
 }
 
-/* .indexH2{
-
-} */
+@include media-breakpoint-up(sm) {
+    .indexH2 {
+        padding-top: 1rem;
+        font-size: 1.75rem;
+    }
+}
 
 .indexH3{
-    font-size: .75rem;
+    font-size: 1.15rem;
     color: black;
+}
+@include media-breakpoint-up(sm) {
+    .indexH3 {
+        font-size: 1.35rem;
+    }
 }
 
 .btn {
     background-color: rgb(219, 121, 1);
     margin: 0px 2px;
+    text-decoration: none;
+}
+
+.btn:hover {
+	background-color: #5bc0de;
+}
+.btn {
+	border: none;
 }
