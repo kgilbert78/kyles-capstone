@@ -8,19 +8,20 @@ function initMap() {
     const directionsService= new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
     map= new google.maps.Map(document.getElementById("map"), {
-        // general map settings, centered to Common Space
-        center: {lat: 43.0474744, lng: -76.1510856},
+        // general map settings
+        center: {lat: 43.0484, lng: -76.149487},
         zoom: 17
     });
     directionsRenderer.setMap(map);
 
-    // don't think I need 2 functions here. work on simplifying.
+    // don't think I need 2 functions here. work on simplifying and still using button to call function.
     const directionsButton = () => {
         //console.log("directions button is connected");
         calculateAndDisplayRoute(directionsService, directionsRenderer);
     };
     document.getElementById("getDirections").addEventListener('click', directionsButton);
 
+    // convert to async/await
     function calculateAndDisplayRoute(directionsService, directionsRenderer) {
         // make into array or object of site locations
         let youAreHere = '43.0472300, -76.1508000'; // temporarily fixed at Common Space
@@ -34,6 +35,7 @@ function initMap() {
             travelMode: google.maps.TravelMode.WALKING
         }).then((response) => {
             directionsRenderer.setDirections(response);
+            // make error status variable work
         }).catch((error) => window.alert("Directions failed due to " + status));
     };
 
@@ -44,6 +46,8 @@ function initMap() {
         label: "You are here"
     });
 
+    // for React, create addMarker function to pass objects into with props for coordinates and pop-up info windows
+    // make original marker disappear when marker that directions creates appears (keep popup somehow?)
     const fayetteParkMarker = new google.maps.Marker({
         position: {lat: 43.048400, lng:-76.146724},
         map: map,
@@ -76,8 +80,6 @@ function initMap() {
 
 /*
 NOTES:
-
-For React, create addMarker function to pass objects into with props for coordinates and pop-up info windows
 
 Example code:
 https://developers.google.com/maps/documentation/javascript/examples/directions-simple#maps_directions_simple-html
