@@ -1,3 +1,20 @@
+const loadAPI = async () => {
+    const response = await fetch(`http://localhost:3005/api`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({apiKey: "walkumentaryKey"})
+    });
+
+    const data = await response.json();
+    const script = document.createElement("script");
+    script.setAttribute("src", `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&callback=initMap&libraries=&v=weekly`);
+    document.body.appendChild(script);
+};
+
+
+
 // // this will only run if it's outside initMap, which is outside the scope of the functions I need to pass as parameters here.
 // function getDirections() {
 //     console.log("directions button is connected");
