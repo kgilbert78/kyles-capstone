@@ -1,13 +1,18 @@
+const googleMapsAPIKey = require("../apiKeys/googleMapsAPIKey");
+// console.log(googleMapsAPIKey);
+// googleMapsAPIKey();
+
 const loadAPI = async () => {
     const response = await fetch(`http://localhost:3005/api`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({apiKey: "walkumentaryKey"})
+        body: JSON.stringify({"apiKey": `${googleMapsAPIKey}`})
     });
 
     const data = await response.json();
+    console.log(data.apiKey);
     const script = document.createElement("script");
     script.setAttribute("src", `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&callback=initMap&libraries=&v=weekly`);
     document.body.appendChild(script);
