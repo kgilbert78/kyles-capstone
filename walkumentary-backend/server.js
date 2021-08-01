@@ -9,7 +9,9 @@ server.get("/", (req, res) => {
 });
 
 server.post("/api", async (req, res) => {
-    res.send(`${googleMapsAPIKey}`);
+    //console.log(req.body);
+    // res.send({apiKey: `${googleMapsAPIKey}`});
+    res.send({googleMapsAPIKey});
 });
 
 server.listen(3005, () => {
