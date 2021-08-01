@@ -61,6 +61,11 @@ h2 {
     max-height: 100%;
 }
 
+.thumbnailImage:hover {
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
 .audioControls {
     font-size: x-large;
 }
