@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./SampleTourSite.scss"
 
 // let images = document.getElementById("thumbnailRow").getElementsByTagName("img");
@@ -12,7 +13,34 @@ import "./SampleTourSite.scss"
 //     }
 // }
 
+
 export const SampleTourSite = (props) => {
+
+    // const hotelSyracuseNow = require('../../../../images/hotelSyracuse.jpg')
+    // const hotelSyracuse1920s = require('../../../../images/hotelSyracuse1920s.jpg')
+
+    // const [featureImageSource, setFeatureImageSource] = useState(hotelSyracuseNow);
+
+    // useEffect(() => {
+    //     changeFeatureImage(event);
+    // }, [featureImageSource]);
+
+    // function changeFeatureImage(event) {
+    //     event = event || window.event;
+
+    //     setFeatureImageSource(hotelSyracuse1920s);
+
+    //     // let targetElement = event.target || event.srcElement;
+
+    //     // if (targetElement.tagName == "IMG") {
+    //     //     console.log(targetElement.getAttribute("src"))
+    //     //     // setFeatureImageSource(hotelSyracuse1920s);
+    //     //     // setFeatureImageSource(targetElement.getAttribute("src"));
+    //     //     // "Unexpected use of 'event'  no-restricted-globals" = something is undefined so it thinks it's a global variable https://stackoverflow.com/questions/63133169/react-js-unexpected-use-of-event-no-restricted-globals
+    //     //     // need useEffect to refresh page https://stackoverflow.com/questions/54283213/why-do-i-get-unexpected-use-of-location-no-restricted-globals
+    //     // }
+    // };
+
     return (
         <div className="TourSite">
             <main>
@@ -27,6 +55,8 @@ export const SampleTourSite = (props) => {
                             className="featureImage img-fluid rounded" 
                             id="featureImage"
                             src={require('../../../../images/hotelSyracuse.jpg').default}
+                            // src={`${featureImageSource}`.default}
+                            // src={require(`../../../../images/${featureImageSource}`).default}
                             alt="Hotel Syracuse"
                             />
                     </div> 
@@ -36,12 +66,14 @@ export const SampleTourSite = (props) => {
             {/*  https://bootstrapcreative.com/bootstrap-text-sizes/    
                 https://www.w3schools.com/bootstrap/bootstrap_typography.asp */}
             {/*  Pixel ( px ) is not scalable, it is an absolute unit. Change in the value of another element does not affect the value of absolute units. ... Element ( em ) and Root element ( rem ) are responsive units interpreted into equivalent px unit by the browser. */}
-                        <div id="thumbnailRow" className="thumbnailRow row pt-3" onclick="changeImage(event)">
+                        <div id="thumbnailRow" className="thumbnailRow row pt-3">
+                        {/* <div id="thumbnailRow" className="thumbnailRow row pt-3" onClick={changeFeatureImage(event)}> */}
                             <div className="thumbnailImageDiv col-3">
                                 <img 
                                     id="thumbnailImage1"
-                                    className="thumbnailImage img-thumbnail rounded" 
-                                    src={require('../../../../images/hotelSyracuse.jpg').default}
+                                    className="thumbnailImage img-thumbnail rounded"
+                                    src={require('../../../../images/hotelSyracuse.jpg').default} 
+                                    // src={require(`${featureImageSource}`).default}
                                     alt="Hotel Syracuse today thumbnail"
                                 />
                             </div>
