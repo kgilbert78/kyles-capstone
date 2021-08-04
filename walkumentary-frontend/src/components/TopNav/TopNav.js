@@ -18,13 +18,26 @@ export const TopNav = (props) => {
                             <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="navbar-collapse collapse justify-content-center" id="mainNav">
-                        {/* CREATE ROUTER HERE TO USE LINK TO INSTEAD OF A HREF, uncomment import at top */}
+                        {/* CREATE ROUTER HERE TO USE LINK TO INSTEAD OF A HREF, uncomment import at top
+                        <Router>
+                            <Switch>
+                                <Route exact path="/">
+                                    <Homepage />
+                                </Route>
+                                <Route path="/map">
+                                    <MapPage />
+                                </Route>
+                                <Route path="/tour">
+                                    <TourPageLayout />
+                                </Route>
+                            </Switch>
+                        </Router> */}
                         <ul className="navItemsList navbar-nav">
                             <li className="navItem nav-item">
                                 <a className="nav-link" href="/">Home</a>
                             </li>
                             <li className="navItem nav-item">
-                                <a className="nav-link" href="">About</a>
+                                <a className="nav-link" href="">Map</a>
                             </li>
                             <li className="navItem nav-item">
                             <a className="nav-link" href="/tour">Tour Page</a>
